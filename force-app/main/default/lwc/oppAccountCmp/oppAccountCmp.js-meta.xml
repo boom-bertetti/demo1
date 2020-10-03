@@ -3,7 +3,7 @@
     <apiVersion>48.0</apiVersion>
     <isExposed>true</isExposed>
     <masterLabel>Account Component</masterLabel>
-    <description>Account detail component to display on Opportunity or any Objects related to Account</description>
+    <description>Account detail component to display on Opportunity</description>
     <targets>
         <target>lightning__RecordPage</target>
     </targets>
