@@ -1,0 +1,27 @@
+<template>
+    <div class="white-bg slds-p-vertical_large">
+        <template if:true={errorMessage}>
+            <div class="slds-p-around_x-large">
+                <lightning-icon icon-name="utility:error" alternative-text="Error!" title="Error" class="slds-p-right_medium"></lightning-icon>
+                {errorMessage}
+            </div>            
+        </template>
+        <template if:false={errorMessage}>
+            <lightning-record-edit-form object-api-name={objectApiName} record-id={accountId} onsubmit={handleSave}>
+
+                <lightning-input label="Company Name" value={accountName} onchange={handleChange} class="slds-m-bottom_x-small slds-p-horizontal_large">           
+                </lightning-input>
+
+                <lightning-input label="Phone" value={phone} onchange={handleChange} class="slds-m-bottom_x-small slds-p-horizontal_large">           
+                </lightning-input>
+
+                <lightning-input label="Account Number" value={accountNumber} onchange={handleChange} class="slds-m-bottom_x-small slds-p-horizontal_large">           
+                </lightning-input>
+
+                <lightning-button class="slds-m-top_small slds-p-horizontal_large" type="submit" label="Save Account" variant="brand">
+                </lightning-button>
+
+            </lightning-record-edit-form>    
+        </template>
+    </div>
+</template>
